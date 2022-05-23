@@ -14,7 +14,9 @@ const Header = () => {
             src={github}
             width={30}
             height={30}
-            onClick={() => window.open("https://github.com/g4lh4", "_blank")}
+            onClick={() =>
+              window.open("https://github.com/G4LH4/galhaweather", "_blank")
+            }
           />
         </section>
         <section id="location" className="justify-self-end">

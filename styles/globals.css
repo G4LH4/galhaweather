@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 .neomorphism {
-    background: #1A1A37;
-    box-shadow:  10px 10px 40px #16162f,
-                -10px -10px 40px #1e1e3f;
+    /* background: #1A1A37; */
+    box-shadow:  10px 10px 50px #fff,
+                -10px -10px 50px #fff;
 }
   

@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bgColor: "#0c0c1c",
+        bgColor: "#18143c",
         secondaryColor: "#FFC800",
-        boxColor: "#1A1A37",
+        boxColor: "#1c1c4c",
       },
       fontFamily: {
         Roboto: ["Roboto", "sans-serif"],
