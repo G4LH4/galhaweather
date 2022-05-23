@@ -18,7 +18,6 @@ const Home = () => {
 
       <div className="w-11/12 m-auto space-y-10 text-center">
         <Image src={cloudyWeather} />
-
         <h1 className="text-6xl">
           Weather <span className=" text-secondaryColor">News & Feed</span>
         </h1>
