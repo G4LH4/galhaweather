@@ -2,11 +2,18 @@ import Image from "next/image";
 
 import mapPin from "../public/map-pin.svg";
 
+import { useState, useEffect } from "react";
+
 // Temporal image
 import lightningAndRain from "../public/lightning-and-rain.png";
 
 const CardToday = ({ data }) => {
-  console.log(data);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (data) setIsLoading(false);
+  }, [data]);
+
   return (
     <div id="card-today" className="p-5 mx-auto space-y-12 font-semibold">
       <h1 className="text-3xl tracking-wide">Today's report</h1>
@@ -21,7 +28,7 @@ const CardToday = ({ data }) => {
         />
 
         <h1 className="text-2xl font-bold tracking-wide">
-          {data?.condition.text}
+          {isLoading ? "Loading..." : data?.condition.text}
         </h1>
 
         <h1 className="font-bold tracking-wide text-7xl">

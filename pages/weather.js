@@ -20,12 +20,12 @@ export default function Weather() {
   }, []);
 
   return (
-    <div className="flex flex-col w-screen text-white h-max font-Inter bg-bgColor">
+    <div className="flex flex-col w-screen h-screen text-white font-Inter bg-bgColor">
       <Header location={location} />
 
       <MainSection data={data} />
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

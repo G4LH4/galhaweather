@@ -7,11 +7,7 @@ const MainSection = ({ data }) => {
     <div id="main-section">
       <CardToday data={data} />
 
-      <SecondaryData
-        humidity={data?.humidity}
-        feelslike_c={data?.feelslike_c}
-        wind_kph={data?.wind_kph}
-      />
+      <SecondaryData data={data} />
     </div>
   );
 };
