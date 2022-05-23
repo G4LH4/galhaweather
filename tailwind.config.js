@@ -4,14 +4,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    backgroundImage: {
+      elipses: "url('./public/elipses.png')",
+    },
     extend: {
       colors: {
-        bgColor: "#18143c",
-        secondaryColor: "#FFC800",
-        boxColor: "#1c1c4c",
+        bgColor: "black",
+        secondaryColor: "#2267ED",
+        boxColor: "#384152",
       },
       fontFamily: {
-        Roboto: ["Roboto", "sans-serif"],
+        Inter: ["Inter", "sans-serif"],
       },
     },
   },

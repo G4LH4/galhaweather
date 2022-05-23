@@ -1,12 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.neomorphism {
-    /* background: #1A1A37; */
-    box-shadow:  10px 10px 50px #fff,
-                -10px -10px 50px #fff;
-}
-  

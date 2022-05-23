@@ -2,12 +2,12 @@ import Image from "next/image";
 
 import github from "../public/github.png";
 
-const Header = () => {
+const Header = ({ location }) => {
   return (
     <div id="header">
       <div
         id="container"
-        className="grid items-center grid-flow-col grid-rows-1 p-5 justify-items-stretch"
+        className="grid items-center grid-flow-col grid-rows-1 p-5 tracking-wide justify-items-stretch"
       >
         <section id="theme" className="justify-self-start">
           <Image
@@ -20,7 +20,9 @@ const Header = () => {
           />
         </section>
         <section id="location" className="justify-self-end">
-          Weather Forecast
+          <h1>
+            {location?.city}, {location?.country}
+          </h1>
         </section>
       </div>
     </div>

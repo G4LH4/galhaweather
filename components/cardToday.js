@@ -5,35 +5,30 @@ import mapPin from "../public/map-pin.svg";
 // Temporal image
 import lightningAndRain from "../public/lightning-and-rain.png";
 
-const CardToday = ({ data, location }) => {
+const CardToday = ({ data }) => {
+  console.log(data);
   return (
-    <div
-      initial={{ translateX: 100 }}
-      animate={{ translateX: 0 }}
-      transition={{ duration: 0.5 }}
-      id="card-today"
-      className="w-11/12 p-5 mx-auto font-semibold bg-boxColor rounded-3xl"
-    >
-      <section className="grid items-center justify-between grid-flow-col grid-rows-1">
-        <h1 className="text-2xl ">Today</h1>
-        <h4 className="text-sm font-light brightness-75">
-          {data?.localtime.split("-").join("/")}
-        </h4>
-      </section>
+    <div id="card-today" className="p-5 mx-auto space-y-12 font-semibold">
+      <h1 className="text-3xl tracking-wide">Today's report</h1>
 
-      <section className="grid items-center grid-flow-col grid-rows-1 mt-10 gap-x-10 ">
-        <h1 className="text-6xl">
-          {data?.temp_c}
-          <span className="text-3xl align-top text-secondaryColor">°C</span>
+      <section
+        id="imagen"
+        className="grid w-7/12 grid-cols-1 mx-auto text-center space-y-7"
+      >
+        <Image
+          src={lightningAndRain}
+          className="bg-[url('../public/elipses.png')] bg-no-repeat "
+        />
+
+        <h1 className="text-2xl font-bold tracking-wide">
+          {data?.condition.text}
         </h1>
 
-        <Image src={lightningAndRain} />
+        <h1 className="font-bold tracking-wide text-7xl">
+          {data?.temp_c}
+          <span className="text-secondaryColor">°</span>
+        </h1>
       </section>
-
-      <footer className="flex items-center mt-10 space-x-2 font-light">
-        <Image src={mapPin} height={30} width={30} />
-        <h3>{location?.city}</h3>
-      </footer>
     </div>
   );
 };

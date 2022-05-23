@@ -10,30 +10,30 @@ const Home = () => {
   return (
     <div
       id="land-page"
-      className="flex w-screen h-screen font-mono text-white bg-bgColor"
+      className="flex w-screen h-screen text-white font-Inter bg-bgColor"
     >
       <Head>
         <title>Galha weather</title>
       </Head>
 
-      <div className="w-11/12 m-auto space-y-10 text-center">
-        <Image src={cloudyWeather} />
-        <h1 className="text-6xl">
-          Weather <span className=" text-secondaryColor">News & Feed</span>
-        </h1>
+      <div className="w-11/12 m-auto text-center space-y-14">
+        <Image
+          src={cloudyWeather}
+          className="bg-[url('../public/elipses.png')] bg-no-repeat"
+        />
+        <h1 className="text-5xl font-bold">Weather news & Feed</h1>
 
         <p className=" brightness-75">
-          Duis accumsan placerant finibus. Sed fringilla nibh nmon nibgh congue
-          preanetas praentra nono sapien.
+          Get to know the weather maps and radar precipitation forecast.
         </p>
 
         <Link href="/weather">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="p-5 px-20 text-2xl font-bold text-black rounded-xl bg-secondaryColor"
+            className="p-5 px-32 text-base rounded-xl bg-secondaryColor"
           >
-            Get start
+            Get started
           </motion.button>
         </Link>
       </div>

@@ -1,14 +1,29 @@
+import { useEffect, useState } from "react";
+
+import getWeather from "../services/rapidApi/rapidApi";
+
+import useGeoLocation from "../hooks/useGeoLocation";
+
 // Components
 import Header from "../components/header";
 import MainSection from "../components/MainSection";
 import Footer from "../components/footer";
 
 export default function Weather() {
-  return (
-    <div className="flex flex-col w-screen h-screen font-mono text-white bg-bgColor">
-      <Header />
+  const [data, setData] = useState(null);
+  const location = useGeoLocation();
 
-      <MainSection />
+  useEffect(() => {
+    getWeather()
+      .then((data) => setData(data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  return (
+    <div className="flex flex-col w-screen text-white h-max font-Inter bg-bgColor">
+      <Header location={location} />
+
+      <MainSection data={data} />
 
       <Footer />
     </div>
