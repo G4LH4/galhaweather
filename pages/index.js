@@ -16,10 +16,10 @@ const Home = () => {
         <title>Galha weather</title>
       </Head>
 
-      <div className="w-11/12 m-auto text-center space-y-14">
+      <div className="w-11/12 m-auto text-center space-y-14 ">
         <Image
           src={cloudyWeather}
-          className="bg-[url('../public/elipses.png')] bg-no-repeat"
+          className="bg-[url('../public/elipses.png')] bg-no-repeat bg-center"
         />
         <h1 className="text-5xl font-bold">Weather news & Feed</h1>
 

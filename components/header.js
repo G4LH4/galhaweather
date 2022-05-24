@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import mapPin from "../public/map-pin.png";
+
 import github from "../public/github.png";
 
 const Header = ({ location }) => {
@@ -19,8 +21,9 @@ const Header = ({ location }) => {
             }
           />
         </section>
-        <section id="location" className="justify-self-end">
-          <h1>
+        <section id="location" className="flex space-x-2 justify-self-end">
+          <Image src={mapPin} />
+          <h1 className="text-white ">
             {location?.city}, {location?.country}
           </h1>
         </section>

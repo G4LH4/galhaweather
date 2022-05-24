@@ -1,7 +1,9 @@
 import fetchIpInfo from "../ipInfo";
 
-const getWeather = async () => {
-  const getLocation = await fetchIpInfo();
+const getWeather = async (location) => {
+  let setLocation;
+
+  if (!location) setLocation = await fetchIpInfo();
 
   const options = {
     method: "GET",
@@ -10,7 +12,7 @@ const getWeather = async () => {
       "X-RapidAPI-Key": "6d8f2fc086mshab9e50a3771f476p1c3e89jsned0e478d15f0",
     },
   };
-  const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${getLocation.city}`;
+  const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${setLocation.city}`;
 
   const fetchUrl = await fetch(url, options);
   const dataJson = await fetchUrl.json();

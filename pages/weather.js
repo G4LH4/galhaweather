@@ -6,11 +6,12 @@ import useGeoLocation from "../hooks/useGeoLocation";
 
 // Components
 import Header from "../components/header";
-import MainSection from "../components/MainSection";
+import MainSection from "../components/weather-page/MainSection";
 import Footer from "../components/footer";
 
 export default function Weather() {
   const [data, setData] = useState(null);
+
   const location = useGeoLocation();
 
   useEffect(() => {
@@ -20,12 +21,14 @@ export default function Weather() {
   }, []);
 
   return (
-    <div className="flex flex-col w-screen h-screen text-white font-Inter bg-bgColor">
-      <Header location={location} />
+    <div className="flex flex-col w-screen h-screen m-auto text-white font-Inter bg-bgColor">
+      <section className="m-auto">
+        <Header location={location} />
 
-      <MainSection data={data} />
+        <MainSection data={data} />
 
-      {/* <Footer /> */}
+        <Footer />
+      </section>
     </div>
   );
 }

@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         bgColor: "black",
         secondaryColor: "#2267ED",
-        boxColor: "#384152",
+        boxColor: "#2E3440",
       },
       fontFamily: {
         Inter: ["Inter", "sans-serif"],

@@ -1,10 +1,10 @@
 // Components
 import CardToday from "./cardToday";
-import SecondaryData from "./secondaryData/secondaryData";
+import SecondaryData from "../secondaryData/secondaryData";
 
 const MainSection = ({ data }) => {
   return (
-    <div id="main-section">
+    <div id="main-section h-screen">
       <CardToday data={data} />
 
       <SecondaryData data={data} />
