@@ -7,7 +7,6 @@ import useGeoLocation from "../hooks/useGeoLocation";
 // Components
 import Header from "../components/header";
 import MainSection from "../components/weather-page/MainSection";
-import Footer from "../components/footer";
 
 export default function Weather() {
   const [data, setData] = useState(null);
@@ -26,8 +25,6 @@ export default function Weather() {
 
       <section className="m-auto bg-bgColor">
         <MainSection data={data} />
-
-        <Footer />
       </section>
     </div>
   );

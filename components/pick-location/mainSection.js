@@ -4,7 +4,7 @@ import LocationCards from "./locationCards";
 const MainSection = () => {
   return (
     <div id="main-section-pl">
-      <div className="flex flex-col p-5 mx-auto space-y-14 ">
+      <div className="flex flex-col p-5 mx-auto space-y-20 ">
         <TitleText title={"Pick location"} />
 
         <div>
