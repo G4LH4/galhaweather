@@ -21,10 +21,10 @@ export default function Weather() {
   }, []);
 
   return (
-    <div className="flex flex-col w-screen h-screen m-auto text-white font-Inter bg-bgColor">
-      <section className="m-auto">
-        <Header location={location} />
+    <div className="flex flex-col h-screen text-white font-Inter bg-bgColor">
+      <Header location={location} />
 
+      <section className="m-auto bg-bgColor">
         <MainSection data={data} />
 
         <Footer />

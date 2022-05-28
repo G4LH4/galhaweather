@@ -4,7 +4,7 @@ import SecondaryData from "../secondaryData/secondaryData";
 
 const MainSection = ({ data }) => {
   return (
-    <div id="main-section h-screen">
+    <div id="main-section ">
       <CardToday data={data} />
 
       <SecondaryData data={data} />

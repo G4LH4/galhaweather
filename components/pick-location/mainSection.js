@@ -1,26 +1,21 @@
-import Image from "next/image";
-import { motion } from "framer-motion";
+import TitleText from "../titleText";
+import LocationCards from "./locationCards";
 
-import CardPickLocation from "./cardPickLocation";
-
-// Image
-import mapPin from "../../public/map-pin.png";
-
-const MainSection = ({ data }) => {
+const MainSection = () => {
   return (
     <div id="main-section-pl">
-      <CardPickLocation data={data} />
+      <div className="flex flex-col p-5 mx-auto space-y-14 ">
+        <TitleText title={"Pick location"} />
 
-      <div className="flex p-5 mx-auto">
-        <input
-          type={"text"}
-          placeholder="🔍 Search"
-          className="p-2 rounded bg-boxColor"
-        />
+        <div>
+          <input
+            type={"text"}
+            placeholder="🔍 Search"
+            className="w-full p-2 text-white rounded bg-boxColor"
+          />
+        </div>
 
-        <motion.button className="p-2 ml-4 align-middle rounded bg-boxColor">
-          <Image src={mapPin} />
-        </motion.button>
+        <LocationCards />
       </div>
     </div>
   );
