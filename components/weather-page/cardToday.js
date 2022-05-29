@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import { useState, useEffect } from "react";
 
+const axios = require("axios");
+
 import MainDiv from "../mainDiv";
 
 // Temporal image
@@ -26,8 +28,13 @@ const CardToday = ({ data }) => {
             id="imagen"
             className="grid grid-cols-1 mx-auto text-center space-y-7"
           >
-            <div className="w-9/12 mx-auto">
-              <Image src={showers} />
+            <div className="mx-auto w-fit ">
+              {/* <Image
+                src={`https:${data?.condition?.icon}`}
+                width={300}
+                height={300}
+              /> */}
+              <Image src={showers} width={250} height={250} />
             </div>
 
             <h1 className="text-2xl font-bold tracking-wide">

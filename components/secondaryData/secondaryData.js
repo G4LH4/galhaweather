@@ -17,7 +17,7 @@ const SecondaryData = ({ data }) => {
   return (
     <div
       id="secondary-data"
-      className="flex justify-between p-3 mt-10 space-x-10 text-sm text-center "
+      className="flex justify-between p-3 space-x-10 text-sm text-center mt-14 "
     >
       <SectionData
         imgSrc={feelsLikeIMG}
